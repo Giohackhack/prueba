@@ -1,0 +1,16 @@
+<Html>
+<head>TEST</head>
+<body>
+<style>
+body{ background: red;}
+</style>
+<h1>hola</h1>
+<br><q>hola mundo!!</q>
+<br><blockquote>texto  blockquote </blockquote>
+<br><abbr title="texto a introducir">texto</abbr>
+<br><address>direccion</address>
+<br><cite>texto a poner</cite>
+<p>sale al reves: </p>
+<bdo dir="rtl"> texto</bdo>
+</body>
+</Html>
