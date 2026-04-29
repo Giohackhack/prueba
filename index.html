@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú de comida rápida</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fff8f0, #fde2e4);
+      text-align: center;
+      padding: 40px;
+      margin: 0;
+    }
+
+    .contenedor {
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    h1 {
+      color: #7a3e2b;
+      margin-bottom: 30px;
+    }
+
+    .opciones {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .opcion {
+      background: #fff;
+      border-radius: 18px;
+      padding: 15px;
+      width: 180px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .opcion:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+    }
+
+    .opcion button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .opcion img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .opcion p {
+      margin-top: 12px;
+      font-weight: bold;
+      color: #5a3d2b;
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Menú de comida rápida</h1>
+
+    <div class="opciones">
+      <div class="opcion">
+        <button type="button" onclick="preguntarSustitucion('hamburguesa')">
+          <img src="hamburguesa.jpg" alt="Hamburguesa">
+        </button>
+        <p>Hamburguesa</p>
+      </div>
+
+      <div class="opcion">
+        <button type="button" onclick="preguntarSustitucion('empanada')">
+          <img src="empanada.jpg" alt="Empanada">
+        </button>
+        <p>Empanada</p>
+      </div>
+
+      <div class="opcion">
+        <button type="button" onclick="preguntarSustitucion('perro')">
+          <img src="perro.jpg" alt="Perro caliente">
+        </button>
+        <p>Perro</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function preguntarSustitucion(producto) {
+      const respuesta = confirm("¿Desea alguna sustitución para " + producto + "?");
+
+      if (respuesta) {
+        if (producto === "hamburguesa") {
+          window.location.href = "susticiones-hamburguesa.html";
+        } else if (producto === "empanada") {
+          window.location.href = "susticiones-empanada.html";
+        } else if (producto === "perro") {
+          window.location.href = "susticiones-perro.html";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
